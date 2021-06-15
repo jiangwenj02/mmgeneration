@@ -124,6 +124,8 @@ def train_model(model,
     else:
         optimizer_config = cfg.optimizer_config
 
+    print(cfg.optimizer_config)
+
     # update `out_dir` in  ckpt hook
     if cfg.checkpoint_config is not None:
         cfg.checkpoint_config['out_dir'] = os.path.join(
